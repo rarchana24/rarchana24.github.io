@@ -8,7 +8,7 @@
 ​
     <title>Bootstrap Visualization Dashboard</title>
 ​
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
 	<link rel="stylesheet" type="text/css" href="style.css">
 ​
@@ -16,12 +16,12 @@
 <body>
     <!-- Start of navbar -->
 	<div class="navigation">
-	  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">Lattitude</a>
-        <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	  <nav class="navbar navbar-expand-sm navbar-blue"><!--"navbar fixed-top navbar-expand-lg navbar-light"-->
+        <a class="navbar-brand" href="index.html">Weather & Latitude
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-​
+​</a>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
@@ -48,60 +48,83 @@
     <!-- End of navbar -->
 ​
   <!-- Start of container -->
-    <div class="container">
+   <div class="container">
       <section class="row">
-        <div class="col-md-6">
-          <div class="description-content">
-            <h1 class="description-header">Summary: Latitude vs. X</h1>
+        <div class = 'col-md-4'></div>
+        <div class="col-lg-12">
+            <h1 class="description-header">Welcome to Data Visualization Dashboard</h1>
+          </div>
+          <div class = 'col-md-12'> </br></div>
+        </div>
+      </div>
+        <!-- line breaks to push header down -->
+        <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div>
             <hr>
-            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. 
+            <div class="col-lg-12">
+            <p>The purpose of this project is to analyze how weather changes as you get closer to the equator. 
+              I tried to use the plots we generated in the api assignment and try to build the web pages based on the results. 
+              The visualisation is for the parameters with respect to temperature,latitude,cloudiness and Windspeed with respect to the latitudes.
             </p>
-            <img src="Resources/assets/images/Fig1.png" alt="Latitude vs. Max Temperature" class="description-image">
-            
+          <!--<img src="Resources/assets/images/Fig1.png" alt="Latitude vs. Max Temperature" class="description-image">-->
+          </div>
           </div>
         </div>
+      </div>
         
  <!-- Start of Visualizations imageNav Area -->
- 
-        <div class="col-md-6">
-          <section id="imageNav-area">
-            <div class="content">
-              <h2 class="imageNav-header">Visualizations</h2>
-              </section>
-            <hr>
-              <div class="container">
-			    <div class="row">
-				  <div class="col-12">
-                    <a href="temp.html">
-				      <img src="Resources/assets/images/Fig1.png" alt="Latitude vs. Max Temperature", title="Latitude vs. Max Temperature" class="photo">
-                    </a>
-                    </div>
-                    <div class="col-12">
-                    <a href="humidity.html">
-				      <img src="Resources/assets/images/Fig2.png" alt="Latitude vs. Humidity", title="Latitude vs. Humidity" class="photo">
-			        </a>
-                    </div>
-				  <div class="col-12">
-                    <a href="cloudiness.html">
-				      <img src="Resources/assets/images/Fig3.png" alt="Latitude vs. Cloudiness", title="Latitude vs. Cloudiness", class="photo">
-                    </a>
-                </div>
-                    <div class="col-12">
-                    <a href="Windspeed.html">
-				      <img src="Resources/assets/images/Fig4.png" alt="Latitude vs. Wind Speed", title="Latitude vs. Wind Speed", class="photo">
-				    </a>
-				  </div>
-                </div>
-			  </div>
-            </div>
-        
-          </section>
-          <!-- End of the Visualizations imageNav Area -->
-​
-        </div>
-      </section>
-    
-    </div>
+ <!-- Add another container to hold the visualisation-->
+ <!-- Visualizations -->
+        <!-- Header -->
+        <div id = "bottom_visual" class="container"> 
+          <div class="row">
+              <div class="col-md-12">
+                  </br> <!-- line break to push header down -->
+              </div>
+          </div>
+          <hr> <!-- horizontal line -->
+  
+          <!-- Header content for visualization section -->
+          <div class="row align-items-center">
+              <div class = 'col-md-4'></br></br></br></div>
+              <div class="col-lg-4">
+                  <h3 id="bot_header">Graphic Visualizations</h3>
+              </div>
+              <div class = 'col-md-4'></br></br></br></div>
+          </div>
+  
+          <div class="row align-items-center">
+              <div class="col-lg-3">
+                  <a target ="_blank" href="temperature.html">
+                      <img class="img-fluid" src="Resources/assets/images/Fig1.png"
+                      alt = "Maximum Temperature vs. Latitude" height="225" width="300">
+                  </a>
+              </div>
+              <div class="col-lg-3">
+                  <a target ="_blank" href="humidity.html">
+                      <img class="img-fluid" src="Resources/assets/images/Fig2.png"
+                      alt = "Humidity vs. Latitude" height="225" width="300">
+                  </a>
+              </div>
+              <div class="col-lg-3">
+                  <a target ="_blank" href="cloudiness.html">
+                      <img class="img-fluid" src="Resources/assets/images/Fig3.png"
+                      alt = "Cloudiness vs. Latitude" height="225" width="300">
+                  </a>
+              </div>
+              <div class="col-lg-3">
+                  <a target ="_blank" href="Windspeed.html">
+                      <img class="img-fluid" src="Resources/assets/images/Fig4.png"
+                      alt = "Windspeed vs. Latitude" height="225" width="300">
+                  </a>
+              </div>
+          </div>
+      
+          <hr>
+      </div>
+  
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
