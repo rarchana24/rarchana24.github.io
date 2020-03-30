@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+.dropbtn {
+  background-color: teal;
+  color: white;
+  padding: 5px;
+  font-size: 15px;
+  font-family: "Lucida Console", Courier, monospace;
+  border: 5px;
+  
+}
+.subject {	
+font-size: 15px;
+font-family: "Lucida Console", Courier, monospace;
+color: blue
+}
+#heading {
+    font-size: 50px;
+    font-weight: bold;
+	color: #FFFFFF;
+}
+
+#para-heading {
+    font-size: 20px;
+    font-weight: italic;
+	color: #FFFFFF;
+}
+
+.panel-title {	
+font-size: 15px;
+font-family: "Lucida Console", Courier, monospace;
+color: blue
+}
+.panel-body {	
+font-size: 15px;
+font-family: "Lucida Console", Courier, monospace;
+color: blue
+}
+#position{
+align:middle;
+}
+
+
+
+</style>
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="background-color:powderblue;" background="gut.jpg">
+
+  <div class="container">
+    <div class="row">
+      <!--<div class="col-md-12 jumbotron text-center"> -->
+	  <div class="col-md-12 jumbotron text-center" style="background-image: url(https://media.giphy.com/media/3oz8xyHVd5JVk1M70k/giphy.gif); background-size: cover; background-position: center; height: 400px;">
+        <h1 id="heading">Belly Button Dashboard</h1>
+        <p id ="para-heading">An interactive dashboard of microbacteria samples of belly buttons.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="well">
+          <h5 class="subject">Select Sample</h5>
+          <select class="dropbtn" id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+	  <!-- add div for row -->
+	 
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+	
+	  
+      <div class="col-md-4">
+        <div id="gauge"></div>
+      </div>
+	
+    </div>
+	</div>
+
+ </br></br>
+   <div class="container">
+    <div class="row">
+ 
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+
+    
+  </div>
+  </div>
+   </br></br>
+  
+     <div class="container">
+    <div class="row">
+ 
+
+	  <!-- for pie chart -->
+	   <div class="col-md-6">
+        <div id="pie"></div>
+      </div>
+    
+  </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+  <script src="./static/js/bonus.js"></script>
+
+</body>
+
+</html>
