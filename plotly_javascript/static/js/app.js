@@ -116,7 +116,7 @@ function buildCharts(new_samples) {
     let layout_bubble = {
 		"titlefont": {
     "size": 20,
-	"color":"green"
+	"color":"black"
 		},
         title: `<b>Umbilical Flora Population - Sample ID :</b><i> ${new_samples}`,
         xaxis : {
@@ -124,11 +124,9 @@ function buildCharts(new_samples) {
 			titlefont:{color:"green",size:15}
 		},
         height:400,
-        width:600,
-		
-		
-
-
+        width:750,
+        // height:400,
+        // width:1280,
 
     };
     Plotly.newPlot("bubble",data_bubble,layout_bubble);
@@ -153,7 +151,7 @@ let data_bar =[bar_trace];
 let layout_bar ={
 			"titlefont": {
     "size": 20,
-	"color":"green"
+	"color":"black"
 		},
     title: `<b>Umbilical Flora Population - Sample ID :</b><i> ${new_samples}`,
     xaxis : {
@@ -168,9 +166,9 @@ let layout_bar ={
         r:100,
         t:100,
         b:30
-    }
+    },
 
-
+    paper_bgcolor: "#D3D3D3"
 
 };
 
@@ -189,12 +187,12 @@ var trace_guage = {
 
     title: { 
 			
-        text: '<b>Belly Button Washing Frequency</b> <br><i> Scrubs per Week</i> ' ,
+        text: `<b>Washing Frequency</b><i> ${new_samples}</i> <br><i> Scrubs per Week</i>` ,
 
     },
     titlefont:{
         size:20,
-        color:"green"
+        color:"black"
     },
     type: "indicator",
     mode: "gauge+number",
@@ -205,9 +203,14 @@ var trace_guage = {
             { range: [2, 4], color: "cyan" },
             { range: [4, 6], color: "teal" },
             { range: [6, 8], color: "lime" },
-            { range: [8, 9], color: "green" },
+            { range: [8, 9], color: "green" },  
       ],
-      bar: {color: "#AF4D43"},
+      bar: {
+          //color: "#AF4D43"
+          color: "red"
+
+        },
+
     }
 };
 
@@ -216,7 +219,8 @@ var layout_guage = {
 
     width: 500, 
 	height: 450,
-    margin: { t: 0, b: 0 } 
+    margin: { t: 0, b: 0 },
+    paper_bgcolor: "lavender"
 };
 
 Plotly.newPlot("gauge", data_guage, layout_guage);
@@ -230,16 +234,27 @@ var pie_trace = {
     labels: samples.otu_ids.slice(0,10).reverse(),
     type: "pie",
     hovertext: samples.otu_labels.slice(0,10).reverse(),
-    textinfo:'percent'
+    textinfo:'percent',
+    marker:{
+        line: {
+            color: 'black',
+            width: 1
+          }
+    }
   };
 
 var pie_data =[pie_trace];
 var pie_layout = {
 			"titlefont": {
     "size": 20,
-	"color":"green"
+	"color":"black"
 		},
-    title: `<b>PIE CHART</b>`
+    title: `<b>PIE CHART</b>`,
+
+    width:500,
+    height:400,
+
+    paper_bgcolor: "#00ffbf"
 
 };
 
