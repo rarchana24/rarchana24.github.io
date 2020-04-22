@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WAQI Dataset</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://unpkg.com/simple-statistics@5.0.0/dist/simple-statistics.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+#myInput {
+
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 15%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+#myInput1 {
+
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 15%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+ body {
+      background-color: unset;
+    }
+/* table {
+    border-collapse: collapse;
+    width: 100%;
+} */
+
+ td {
+    text-align: left;
+    padding: 8px;
+	color:black;
+}
+tbody>tr:nth-child(even){background-color: #F4ECD9 !important}
+tbody>tr:nth-child(odd){background-color: #C4B3B9 !important}
+ th {
+  background-color: #2f3439;
+  color: white;
+}
+#border4{
+border: 10px solid;
+border-color: black #444 #888 #ccc;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+} 
+  </style>
+</head>
+
+<body id="border4"  style="background-color:Aliceblue;" >
+<div class="topnav bg-info text-center py-1 rounded"">
+   <a class="active" href="index.html">Home</a>
+  <a href="plotly_index.html">Plotly Visualization</a>
+  <a href="map_index.html">GeoMapping Visualization</a>
+  <a href="matplot_index.html">MatplotLib Visualization</a>
+  <div class="topnav-right">
+    <a href="LiveData.html">Live Data</a>
+    <a href="index_dataset.html">HTML Dataset</a>
+	<a href="index_mongodb.html">MongoDB Screenshots</a>
+  </div>
+</div>
+</br></br>
+<div class="container">
+<input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="City" title="Type in a name">
+<input type="text" class="form-control" id="myInput1" onkeyup="myFunction1()" placeholder="AQI" title="Type in a name">
+</br></br>
+
+    <div class="row">
+      <div class="col-md-12">
+        <table id="summary-table" class="table table-bordered"> <!--table table-striped table-inverse -->
+          <thead>
+            <tr>
+              <th>CITY</th>
+              <th>AQI</th>
+              <th>DominantPollutant</th>
+              <th>DateTime</th>
+			  <th>CO</th>
+			  <th>NO2</th>
+			  <th>O3</th>
+			  <th>PM10</th>
+			  <th>PM25</th>
+			  <th>SO2</th>
+			  
+			
+
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Footer-->
+  <div class="container-fluid">
+        <div class="footer">
+
+            <!-- Copyright -->
+            <div class="footer bg-info text-center py-1 rounded">
+                <div style="color: white">
+                    Created by
+                    <br>
+                     Archana Rajagopalan | Nicole Nanton | Felix Ochieng | Chrison Mills | Kolanjiappan Kaliyaperumal
+
+                </div>
+                <!-- Copyright -->
+
+            </div>
+        <!-- Footer -->
+        </div>
+    </div>
+
+  <script src="./static/js/getdata.js"></script>
+  <script>
+  function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("summary-table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+function myFunction1() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput1");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("summary-table");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+</script>
+</body>
+
+</html>

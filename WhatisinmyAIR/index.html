@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>What's in my AIR??</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style_bonus.css">
+  <link rel="stylesheet" href="assets/css/d3Style_bonus.css">
+
+</head>
+<style>
+#border4{
+border: 10px solid;
+border-color: black #444 #888 #ccc;
+}
+h2 { 
+  display: block;
+  font-size: 1.5em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+p.inset {border-style: inset;}
+p.groove {border-style: groove;}
+p.round1 {
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+#border4{
+border: 10px solid;
+border-color: black #444 #888 #ccc;
+}
+</style>
+</head>
+<body id="border4"  style="background-color: AliceBlue;">
+
+<div class="topnav bg-info text-center py-1 rounded"">
+  <a class="active" href="index.html">Home</a>
+  <a href="plotly_index.html">Plotly Visualization</a>
+  <a href="map_index.html">GeoMapping Visualization</a>
+  <a href="matplot_index.html">MatplotLib Visualization</a>
+  <div class="topnav-right">
+    <a href="LiveData.html">Live Data</a>
+   <a href="index_dataset.html">HTML Dataset</a>
+   <a href="index_mongodb.html">MongoDB Screenshots</a>
+	
+  </div>
+</div>
+</br>
+		<h1 align="left">What's in my AIR ??</h1>
+	    <div class="container">
+		<div class="row">
+		<div class="col-xs-12 col-md-6 rounded">		
+        <h2 >Project Motivation</h2> 
+		<p class="text-muted text-justify font-italic">
+   		During the recent lockdown due to Coronovirus around the world and the recent forest fires in california and Australia have significantly affected the air quality
+		for hundreds of miles. We sought to analyse the various information about the air quality in cities around the world. Our data was obtained from WAQI, an API 
+		for extracing air quality information based on various parameters. One of the reasons why we selected WAQI is due to its standardized air quality index. 
+		An air quality index (AQI) is a number used to communicate how polluted the air currently is. Today, there is no globally 
+		standardized approach to providing air quality information, meaning AQIs differ from country to country. The WAQI values ranges between 0 to 300+ where lesser numbers
+indicate Excellent air quality and the higher indicates Poor air quality, and is determined based on concentrations of predefined pollutants. 
+		</p>
+      </div>	  
+	  	  <div class="col-xs-12 col-md-6">		  
+        <h2 >Data Overview</h2> 
+		<p class="text-muted text-justify font-italic">
+					We obtained a list of the 500 most populous cities from the 
+					<a href="https://datahub.io/core/world-cities">worldCities.csv</a>. Using city in the file, we were able to 
+					obtain air quality data for 200 cities using the Python requests library. This allowed us to create custom URLs, 
+					based on each city, to request data from WAQI, and receive it in a JSON format. 
+					We requested data about air quality, concentration of pollutants.	
+					 The tools we used in this project include:
+                      </br>
+					  <ul class="list-inline">
+						<li class="list-inline-item"><a href="https://waqi.info/">WAQI API </a></li>
+						<li class="list-inline-item"><a href="https://www.mongodb.com/">MongoDB </a></li>
+						<li class="list-inline-item"><a href="https://www.mapbox.com/">Mapbox </a></li>
+						<li class="list-inline-item"><a href="https://www.w3schools.com/html/">HTML/CSS </a></li>
+						<li class="list-inline-item"><a href="https://d3js.org/">D3 (Data Driven Documents) </a></li>
+						<li class="list-inline-item"><a href="https://leafletjs.com/">Leaflet </a></li>
+						<li class="list-inline-item">
+						<a href="AQIimages\Python_screenshot_1.png">Python</a>
+						<a href="AQIimages\Python_screenshot_2.png">(Jupyter notebook,Requests,</a>
+						<a href="AQIimages\Python_screenshot_3.png">Pandas</a>
+						<a href="AQIimages\Python_screenshot_4.png">PyMongo)</a></li>
+						
+											
+						</ul>			
+		</p>		
+  </div>
+      </div>  
+   
+    <!--<div class="container"> -->
+     <div class="row">
+	         <div class="col-xs-12 col-md-6 rounded"> 
+              <h2>What we did</h2>
+                <div>
+                    <p class="text-muted text-justify font-italic">
+                   &nbsp;&nbsp;&nbsp;&nbsp;Extracting and Sorting data from WAQI
+				   </br>
+				   &nbsp;&nbsp;&nbsp;&nbsp;Build Plots using Plotly 
+				   </br>
+				   &nbsp;&nbsp;&nbsp;&nbsp;Build HTML pages to display the visualization 
+				   </br>
+				   &nbsp;&nbsp;&nbsp;&nbsp;Build Geomapping 
+				   </br>
+				   &nbsp;&nbsp;&nbsp;&nbsp;Get Live Data from WAQI
+                </p>
+
+                </div>
+                </div>
+        <div class="col-xs-12 col-md-6 rounded"> 
+              <h2>Results and Analysis</h2>
+                <div>
+                    <p class="text-muted text-justify font-italic">
+                    Our findings indicate the air quality is densely populated cities tend to be worse on the Indian sub-continent and along east Asia.
+					It also indicated that the western Hemisphere had slightly better air quality.
+					Also noticed that the air quality did not correlate with city population, as Tokyo, the most populous in our database had "good"
+					air quality. 
+                </p>
+
+                </div>
+                </div>
+        </div>
+    </div>
+  </div>
+ </div>
+</br></br>
+  <!-- Footer-->
+  <div class="container-fluid">
+        <div class="footer">
+
+            <!-- Copyright -->
+            <div class="footer bg-info text-center py-1 rounded">
+                <div style="color: white">
+                    Created by
+                    <br>
+                     Archana Rajagopalan | Nicole Nanton | Felix Ochieng | Chrison Mills | Kolanjiappan Kaliyaperumal
+
+                </div>
+                <!-- Copyright -->
+
+            </div>
+        <!-- Footer -->
+        </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+
+</html>

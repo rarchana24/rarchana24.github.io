@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="static/css/leaflet.extra-markers.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="static/css/style.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style_bonus.css">
+  <link rel="stylesheet" href="assets/css/d3Style_bonus.css">
+<style>
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+#border4{
+border: 10px solid;
+border-color: black #444 #888 #ccc;
+</style>
+</head>
+
+<body id="border4"  style="background-color: AliceBlue;">
+
+<div class="topnav bg-info text-center py-1 rounded"">
+  <a class="active" href="index.html">Home</a>
+  <a href="plotly_index.html">Plotly Visualization</a>
+  <a href="map_index.html">GeoMapping Visualization</a>
+  <a href="matplot_index.html">MatplotLib Visualization</a>
+  <div class="topnav-right">
+    <a href="LiveData.html">Live Data</a>
+    <a href="index_dataset.html">HTML Dataset</a>
+	<a href="index_mongodb.html">MongoDB Screenshots</a>
+  </div>
+</div>
+
+    <div id="map"></div>
+	
+	
+	
+	</br></br>
+  <!-- Footer-->
+  <div class="container-fluid">
+        <div class="footer">
+
+            <!-- Copyright -->
+            <div class="footer bg-info text-center py-1 rounded">
+                <div style="color: white">
+                    Created by
+                    <br>
+                     Archana Rajagopalan | Nicole Nanton | Felix Ochieng | Chrison Mills | Kolanjiappan Kaliyaperumal
+
+                </div>
+                <!-- Copyright -->
+
+            </div>
+        <!-- Footer -->
+        </div>
+    </div>
+    
+    <script src="static/js/leaflet.extra-markers.min.js"></script>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+    <script type="text/javascript" src="static/js/config.js"></script>
+
+    <script type="text/javascript" src="static/js/logic.js"></script>
+
+     
+</body>
+
+</html>

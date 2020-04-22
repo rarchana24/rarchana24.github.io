@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>What's in my AIR??</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style_bonus.css">
+  <link rel="stylesheet" href="assets/css/d3Style_bonus.css">
+
+</head>
+<style>
+#border4{
+border: 10px solid;
+border-color: black #444 #888 #ccc;
+}
+h2 { 
+  display: block;
+  font-size: 1.5em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+p.inset {border-style: inset;}
+p.groove {border-style: groove;}
+p.round1 {
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+#border4{
+border: 10px solid;
+border-color: black #444 #888 #ccc;
+}
+</style>
+</head>
+<body id="border4"  style="background-color: AliceBlue;">
+
+<div class="topnav bg-info text-center py-1 rounded"">
+  <a class="active" href="index.html">Home</a>
+  <a href="plotly_index.html">Plotly Visualization</a>
+  <a href="map_index.html">GeoMapping Visualization</a>
+  <a href="matplot_index.html">MatplotLib Visualization</a>
+  <div class="topnav-right">
+    <a href="LiveData.html">Live Data</a>
+   <a href="index_dataset.html">HTML Dataset</a>
+   <a href="index_mongodb.html">MongoDB Screenshots</a>
+
+	
+  </div>
+</div>
+</br>
+		    </br>
+		
+	    <div class="container">
+		<div class="row">
+		<div class="col-sm-6 rounded">		
+        <h2 >Database name : WAQI_Data</h2> 
+		<p>3 tables WAQI_Info, WAQI_info_metadata,WAQI_info_samples</p>
+		<img src="AQIimages\Mongo_image_1.png" alt="WAQI_Data" width="400" height="300">
+      </div>	  
+	  	  <div class="col-sm-6">		  
+        <h2 >WAQI_Info</h2> 
+		<p>The table holds all the information from the web api call </p>
+		<img src="AQIimages\Mongo_image_2.png" alt="WAQI_Info" width="400" height="300">
+  </div>
+      </div>  
+   
+    <!--<div class="container"> -->
+     <div class="row">
+	         <div class="col-md-6 rounded"> 
+              <h2>WAQI_info_metadata</h2>
+			  <p>The table holds metadata about the city. Latitude,Longitude and other parameters</p>
+				<img src="AQIimages\Mongo_image_3.png" alt="WAQI_info_metadata" width="400" height="300">
+                </div>
+				<div class="col-md-6 rounded"> 
+              <h2>WAQI_info_samples</h2>
+			  <p>The table holds details about the pollutants.</p>
+				<img src="AQIimages\Mongo_image_4.png" alt="WAQI_info_samples" width="400" height="300">
+                </div>
+        </div>
+    </div>
+  </div>
+ </div>
+</br></br>
+
+  <!-- Footer-->
+  <div class="container-fluid">
+        <div class="footer">
+
+            <!-- Copyright -->
+            <div class="footer bg-info text-center py-1 rounded">
+                <div style="color: white">
+                    Created by
+                    <br>
+                     Archana Rajagopalan | Nicole Nanton | Felix Ochieng | Chrison Mills | Kolanjiappan Kaliyaperumal
+
+                </div>
+                <!-- Copyright -->
+
+            </div>
+        <!-- Footer -->
+        </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+
+</html>
